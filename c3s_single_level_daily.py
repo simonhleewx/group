@@ -62,7 +62,7 @@ for y, year in enumerate(fc_years):
         "grid": [fc_grid]
     }
 
-    target=fc_center+'_system'+fc_system+'_'+str(year)+fc_month+fc_day+'_mslp_'+fc_area.replace('/','_')+'.nc'   
+    target=fc_center+'_system'+fc_system+'_'+str(year)+fc_month+fc_day+fc_variable+fc_area.replace('/','_')+'.nc'   
     print(target)
     client = cdsapi.Client()
     client.retrieve(dataset, request,target)
